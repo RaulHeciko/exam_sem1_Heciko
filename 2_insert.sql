@@ -520,7 +520,6 @@ INSERT INTO registration (enrollment_year, status, faculty_id, student_id) VALUE
 INSERT INTO registration (enrollment_year, status, faculty_id, student_id) VALUES (2020, 'graduated', 49, 49);
 INSERT INTO registration (enrollment_year, status, faculty_id, student_id) VALUES (2022, 'active', 50, 50);
 
-
 -- table 11 - student_goals
 INSERT INTO student_goals (goal_description, status, student_id) VALUES ('Maintain an average grade above 9', 'Finalized', 1);
 INSERT INTO student_goals (goal_description, status, student_id) VALUES ('Pass all exams with excellent results', 'In progress', 2);
