@@ -40,17 +40,7 @@ SELECT name, head_of_department from department order by head_of_department desc
 SELECT name, head_of_department from department where id = 2 or id <= 2;
 SELECT * FROM department where faculty_id between 20 and 30;
 
--- table 5 -- specialization
-SELECT * FROM specialization where name like '%P%' and id = 46;
-SELECT * FROM specialization where department_id = 12 or id = 2;
-SELECT name, department_id from specialization where duration_years >3 order by name asc;
-SELECT name, department_id, duration_years from specialization where duration_years >3 order by name asc;
-SELECT * FROM specialization where duration_years between 5 and 6 order by duration_years desc;
-SELECT * FROM specialization where duration_years = 3 or id = 50;
-SELECT * FROM specialization where duration_years = 3 and name like '%Geogra%';
-SELECT * FROM specialization where duration_years = 4 order by name asc;
-
--- table 6 -- teacher
+-- table 5 -- teacher
 SELECT * FROM teacher where name like 'C%' and id = 9;
 SELECT name, email from teacher where name like 'And%';
 SELECT * FROM teacher where specialization = 'Geography' or id = 3;
@@ -59,6 +49,16 @@ SELECT * FROM teacher where hire_date > '01.01.2013' order by hire_date desc;
 SELECT name, title, specialization, email from teacher where email like 'd%' order by name asc;
 SELECT * FROM teacher where hire_date between '01.01.2013' and '01.01.2015' order by hire_date asc;
 SELECT * FROM teacher where hire_date between '01.01.1980' and '01.01.2015' order by hire_date asc limit 10;
+
+-- table 6 -- specialization
+SELECT * FROM specialization where name like '%P%' and id = 46;
+SELECT * FROM specialization where department_id = 12 or id = 2;
+SELECT name, department_id from specialization where duration_years >3 order by name asc;
+SELECT name, department_id, duration_years from specialization where duration_years >3 order by name asc;
+SELECT * FROM specialization where duration_years between 5 and 6 order by duration_years desc;
+SELECT * FROM specialization where duration_years = 3 or id = 50;
+SELECT * FROM specialization where duration_years = 3 and name like '%Geogra%';
+SELECT * FROM specialization where duration_years = 4 order by name asc;
 
 -- table 7 -- courses
 SELECT * FROM courses where name like 'Programm%';
