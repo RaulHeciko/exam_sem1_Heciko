@@ -23,17 +23,17 @@ SELECT SUM(faculty_id) as suma from department;
 SELECT MIN(id) as minim from department;
 SELECT AVG(id) as average from department;
 
--- table 5 -- specialization
-SELECT COUNT(id) as total_specialization from specialization;
-SELECT SUM(duration_years) as suma from specialization;
-SELECT AVG(duration_years) as average_years from specialization;
-SELECT MAX(duration_years) as maximum from specialization;
-
--- table 6 -- teacher
+-- table 5 -- teacher
 SELECT COUNT(id) as total_teachers from teacher;
 SELECT MIN(hire_date) as longest_teacher from teacher;
 SELECT MAX(hire_date) as newest_teacher from teacher;
 SELECT AVG(id) from teacher;
+
+-- table 6 -- specialization
+SELECT COUNT(id) as total_specialization from specialization;
+SELECT SUM(duration_years) as suma from specialization;
+SELECT AVG(duration_years) as average_years from specialization;
+SELECT MAX(duration_years) as maximum from specialization;
 
 -- table 7 -- courses
 SELECT COUNT(teacher_id) as all_teachers from courses;
