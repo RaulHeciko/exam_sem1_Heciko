@@ -47,7 +47,6 @@ UPDATE department set name = 'Department of Biodiversity and Ecology' where id =
 UPDATE department set name = 'Department of Economic and Financial Analysis', head_of_department = 'Marin Moise' where name = 'Department of Financial Analysis';
 UPDATE department set head_of_department = 'Ana Popescu', name = 'Department of Contemporary Philosophy' where head_of_department = 'Mihai Popa';
 UPDATE department set name = 'Department of Applied Mathematics and Informatics', head_of_department = 'Iliescu Marius' where id = 10;
-select * from teacher order by name asc;
 
 -- table 5 - teacher
 UPDATE teacher set name = 'Andreea Campeanu', email = 'andreea.campeanu@yahoo.com' where id = 46;
