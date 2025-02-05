@@ -624,4 +624,3 @@ INSERT INTO feedback (rating, feedback_date, student_id, courses_id, teacher_id)
 INSERT INTO feedback (rating, feedback_date, student_id, courses_id, teacher_id) VALUES (8, '2020-01-23', 49, 49, 49);
 INSERT INTO feedback (rating, feedback_date, student_id, courses_id, teacher_id) VALUES (8, '2022-01-25', 50, 50, 50);
 
-
