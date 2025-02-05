@@ -32,21 +32,21 @@ SELECT * FROM department where faculty_id in (select faculty_id from department 
 SELECT * FROM (select * from department where faculty_id in (select faculty_id from department) or name like '%Engineering%') as memory_table where name like '%Science%';
 SELECT * FROM department where faculty_id in (select faculty_id from department where head_of_department like '%Ana%');
 
--- table 5 -- specialization
-SELECT * FROM specialization where duration_years = (select duration_years from specialization where name like '%Software%');
-SELECT * FROM specialization where department_id = (select department_id from specialization where name = 'Data Science');
-SELECT * FROM specialization where duration_years > (select avg(duration_years) from specialization);
-SELECT * FROM (select * from specialization where duration_years >= 4 and department_id in (select id from department where name like '%Engineering%')) as memory_table where name like '%Software%';
-SELECT * FROM specialization where duration_years = 4 and department_id in (select id from department where id > 20);
-SELECT * FROM specialization where department_id in (select id from department where name like '%Engineering%');
-
--- table 6 -- teacher
+-- table 5 -- teacher
 SELECT name, email, specialization from teacher where specialization = (select specialization from teacher where specialization = 'Data Science' and title = 'Professor');
 SELECT * FROM teacher where hire_date = (select hire_date from teacher where hire_date > '01.01.2022');
 SELECT name, title, email from teacher where name = (select name from teacher where name like '%Popa%' and id = 7);
 SELECT name, hire_date from teacher where title = 'Professor' and hire_date > (select hire_date from teacher where title = 'Lecturer' and name = 'Sorin Andrei');
 SELECT name from teacher where title = 'Professor' and hire_date < (select hire_date from teacher where title = 'Lecturer' and name = 'Gabriel Tudor');
 SELECT * FROM teacher where specialization in (select specialization from teacher where title = 'Lecturer') order by name asc limit 7;
+
+-- table 6 -- specialization
+SELECT * FROM specialization where duration_years = (select duration_years from specialization where name like '%Software%');
+SELECT * FROM specialization where department_id = (select department_id from specialization where name = 'Data Science');
+SELECT * FROM specialization where duration_years > (select avg(duration_years) from specialization);
+SELECT * FROM (select * from specialization where duration_years >= 4 and department_id in (select id from department where name like '%Engineering%')) as memory_table where name like '%Software%';
+SELECT * FROM specialization where duration_years = 4 and department_id in (select id from department where id > 20);
+SELECT * FROM specialization where department_id in (select id from department where name like '%Engineering%');
 
 -- table 7 -- courses
 SELECT name, teacher_id from courses where credits in (select credits from courses where credits = 6) and name like '%Medical%';
