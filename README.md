@@ -4,4 +4,5 @@ A university system aims to manage and monitor various aspects of its operations
 
 Entity: university, faculty, facilities, faculty_facilities, department, teacher, department_teacher, specialization, courses, specialization_courses, student, student_specialization, student_courses, grades, student_goals, registration, feedback
 
+
 ![Diagram Description](diagrams.drawio.png)
